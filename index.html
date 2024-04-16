@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        let currentImage = 0;
+        const images = [
+          "image/main_img.png",
+          "image/juse.jpg",
+          "image/pizza.jpg",
+        ];
+
+        // Function to apply CSS to all images
+        function applyCSSToImages() {
+          $(".main_image img").css({
+            width: "700px",
+            height: "500px", // Set the desired height
+            position: "relative",
+            left: "70px",
+          });
+        }
+
+        // Initial CSS application
+        applyCSSToImages();
+
+        function changeImage() {
+          $(".main_image img").attr("src", images[currentImage]);
+          currentImage = (currentImage + 1) % images.length;
+
+          // Apply CSS to the new image
+          applyCSSToImages();
+        }
+
+        // Change the image every 5 seconds
+        setInterval(changeImage, 5000);
+      });
+    </script>
+  </head>
+  <body>
+    <section id="Home">
+      <nav>
+        <div class="logo">
+          <img src="image/logo.png" />
+        </div>
+
+        <ul>
+          <li><a href="#Home">Home</a></li>
+          <li><a href="#About">About</a></li>
+          <li><a href="#Menu">Menu</a></li>
+          <li><a href="#Gallary">Gallary</a></li>
+          <li><a href="#Review">Review</a></li>
+          <li><a href="#Order">Order</a></li>
+        </ul>
+
+        <div class="icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-heart"></i>
+          <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+      </nav>
+
+      <div class="main">
+        <div class="men_text">
+          <h1>Get Fresh<span>Food</span><br />in a Easy Way</h1>
+        </div>
+
+        <div class="main_image">
+          <img src="image/main_img.png" />
+        </div>
+      </div>
+
+      <p>
+        Step into a world of culinary wonder at FoodZone. Our enchanting eatery
+        in the heart of Delhi is where delectable dishes become art, and every
+        visit is an unforgettable journey. With a menu inspired by flavors from
+        around the globe, and a commitment to sustainable sourcing, we invite
+        you to savor exquisite cuisine in an atmosphere of pure enchantment.
+        Whether you're seeking a romantic rendezvous, a vibrant soirée, or an
+        indulgent escape, we're here to transform your dining dreams into
+        reality. Discover the extraordinary at FoodZone.
+      </p>
+
+      <div class="main_btn">
+        <a href="#Order" class="btn btn-primary custom-yellow-btn">Order Now</a>
+        <i class="fa-solid fa-angle-right"></i>
+      </div>
+    </section>
+
+    <!--About-->
+
+    <div class="about" id="About">
+      <div class="about_main">
+        <div class="image">
+          <img src="image/Food-Plate.png" />
+        </div>
+
+        <div class="about_text">
+          <h1><span>About</span>Us</h1>
+          <h3>Why Choose us?</h3>
+          <p>
+            At FoodZone, we invite you to embark on a gastronomic odyssey where
+            every bite tells a story, and each visit is an experience to
+            treasure. Our culinary artisans blend global inspirations with local
+            ingredients to craft dishes that are both innovative and
+            sustainable. Within our enchanting ambiance, we create moments of
+            magic, making every meal a celebration of flavors and an exploration
+            of culinary artistry. Join us and savor the extraordinary, where
+            each dish is a canvas, and each visit is an adventure.
+          </p>
+        </div>
+      </div>
+
+      <a href="#Order" class="about_btn">Order Now</a>
+    </div>
+
+    <!--Menu-->
+
+    <div class="menu" id="Menu">
+      <h1>Our<span>Menu</span></h1>
+
+      <div class="menu_box">
+        <div class="menu_card">
+          <div class="menu_image">
+            <img src="image/buger.jpg" />
+          </div>
+
+          <div class="small_card">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+
+          <div class="menu_info">
+            <h2>Burger</h2>
+            <p>
+              "Experience the ultimate burger sensation, a perfect medley of
+              prime beef, artisanal buns, and delectable toppings."
+            </p>
+            <h3>Rs.120</h3>
+            <div class="menu_icon">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <a href="#Order" class="menu_btn">Order Now</a>
+          </div>
+        </div>
+
+        <div class="menu_card">
+          <div class="menu_image">
+            <img src="image/pasta.jpg" />
+          </div>
+
+          <div class="small_card">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+
+          <div class="menu_info">
+            <h2>Pasta</h2>
+            <p>
+              "Delight in our exquisite pasta, a harmonious fusion of handmade
+              noodles, rich sauces, and flavorful ingredients."
+            </p>
+            <h3>Rs.120</h3>
+            <div class="menu_icon">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <a href="#Order" class="menu_btn">Order Now</a>
+          </div>
+        </div>
+
+        <div class="menu_card">
+          <div class="menu_image">
+            <img src="image/lasagna.webp" />
+          </div>
+
+          <div class="small_card">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+
+          <div class="menu_info">
+            <h2>Lasagna</h2>
+            <p>
+              "Indulge in our classic lasagna, a luscious layering of tender
+              pasta, savory meat, and creamy cheeses."
+            </p>
+            <h3>Rs.180</h3>
+            <div class="menu_icon">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <a href="#Order" class="menu_btn">Order Now</a>
+          </div>
+        </div>
+
+        <div class="menu_card">
+          <div class="menu_image">
+            <img src="image/chocolate_Drink.jpg" />
+          </div>
+
+          <div class="small_card">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+
+          <div class="menu_info">
+            <h2>Chocolate Shake</h2>
+            <p>
+              "Enjoy our creamy chocolate shake, a decadent blend of rich cocoa
+              and luscious ice cream perfection."
+            </p>
+            <h3>Rs.80</h3>
+            <div class="menu_icon">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <a href="#Order" class="menu_btn">Order Now</a>
+          </div>
+        </div>
+
+        <div class="menu_card">
+          <div class="menu_image">
+            <img src="image/pizza.jpg" />
+          </div>
+
+          <div class="small_card">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+
+          <div class="menu_info">
+            <h2>Pizza</h2>
+            <p>
+              "Relish our authentic pizza, a heavenly creation with a crispy
+              crust, savory toppings, and melty cheese."
+            </p>
+            <h3>Rs.180</h3>
+            <div class="menu_icon">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <a href="#Order" class="menu_btn">Order Now</a>
+          </div>
+        </div>
+
+        <div class="menu_card">
+          <div class="menu_image">
+            <img src="image/Hot_dog.jpg" />
+          </div>
+
+          <div class="small_card">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+
+          <div class="menu_info">
+            <h2>Hot Dog</h2>
+            <p>
+              "Savor our gourmet hotdog, a mouthwatering fusion of premium
+              sausages, fresh buns, and delicious condiments."
+            </p>
+            <h3>RS.120</h3>
+            <div class="menu_icon">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <a href="#Order" class="menu_btn">Order Now</a>
+          </div>
+        </div>
+
+        <div class="menu_card">
+          <div class="menu_image">
+            <img src="image/juse.jpg" />
+          </div>
+
+          <div class="small_card">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+
+          <div class="menu_info">
+            <h2>Juice</h2>
+            <p>
+              "Quench your thirst with our refreshing orange juice, a zesty
+              blend of pure, sun-kissed citrus goodness."
+            </p>
+            <h3>Rs.80</h3>
+            <div class="menu_icon">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <a href="#Order" class="menu_btn">Order Now</a>
+          </div>
+        </div>
+
+        <div class="menu_card">
+          <div class="menu_image">
+            <img src="image/biryani.webp" />
+          </div>
+
+          <div class="small_card">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+
+          <div class="menu_info">
+            <h2>Biryani</h2>
+            <p>
+              "Delight in our aromatic biryani, a flavorful fusion of fragrant
+              rice, succulent meats, and exquisite spices."
+            </p>
+            <h3>Rs.160</h3>
+            <div class="menu_icon">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <a href="#Order" class="menu_btn">Order Now</a>
+          </div>
+        </div>
+
+        <div class="menu_card">
+          <div class="menu_image">
+            <img src="image/chocolate.jpg" />
+          </div>
+
+          <div class="small_card">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+
+          <div class="menu_info">
+            <h2>Chocolate</h2>
+            <p>
+              "Indulge in our luscious chocolate, a rich and heavenly treat
+              that's pure cocoa perfection in every bite."
+            </p>
+            <h3>Rs.120</h3>
+            <div class="menu_icon">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <a href="#Order" class="menu_btn">Order Now</a>
+          </div>
+        </div>
+
+        <div class="menu_card">
+          <div class="menu_image">
+            <img src="image/ice_cream.jpg" />
+          </div>
+
+          <div class="small_card">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+
+          <div class="menu_info">
+            <h2>Ice Cream</h2>
+            <p>
+              "Discover the joy of our ice cream, a delightful scoop of creamy,
+              handcrafted sweetness in every bite."
+            </p>
+
+            <h3>Rs.50</h3>
+            <div class="menu_icon">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <a href="#Order" class="menu_btn">Order Now</a>
+          </div>
+        </div>
+
+        <div class="menu_card">
+          <div class="menu_image">
+            <img src="image/Spanchi.jpg" />
+          </div>
+
+          <div class="small_card">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+
+          <div class="menu_info">
+            <h2>Cup Cake</h2>
+            <p>
+              "Delight in our delectable cupcakes, each a miniature work of art,
+              a burst of flavor and pure happiness."
+            </p>
+            <h3>Rs.80</h3>
+            <div class="menu_icon">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <a href="#Order" class="menu_btn">Order Now</a>
+          </div>
+        </div>
+
+        <div class="menu_card">
+          <div class="menu_image">
+            <img src="image/sandwich.jpg" />
+          </div>
+
+          <div class="small_card">
+            <i class="fa-solid fa-heart"></i>
+          </div>
+
+          <div class="menu_info">
+            <h2>Sandwich</h2>
+            <p>
+              "Savor our scrumptious sandwiches, a symphony of fresh ingredients
+              and bold flavors nestled perfectly bread."
+            </p>
+            <h3>Rs.100</h3>
+            <div class="menu_icon">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <a href="#Order" class="menu_btn">Order Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Gallary-->
+
+    <div class="gallary" id="Gallary">
+      <h1>Our<span>Gallary</span></h1>
+
+      <div class="gallary_image_box">
+        <div class="gallary_image">
+          <img src="image/gallary_1.jpg" />
+
+          <h3>Grilled Sandwich</h3>
+          <p>
+            " Grilled Sandwich: A warm, savory blend of fillings and toasted
+            perfection."
+          </p>
+          <a href="#Order" class="gallary_btn">Order Now</a>
+        </div>
+
+        <div class="gallary_image">
+          <img src="image/gallary_2.jpg" />
+
+          <h3>CupCake</h3>
+          <p>
+            "CupCake: A bite-sized delight, a world of flavor in every tiny
+            package."
+          </p>
+          <a href="#Order" class="gallary_btn">Order Now</a>
+        </div>
+
+        <div class="gallary_image">
+          <img src="image/gallary_3.jpg" />
+
+          <h3>Muffins</h3>
+          <p>
+            "Muffins: Moist, flavorful, and a perfect morning or anytime treat."
+            <a href="#Order" class="gallary_btn">Order Now</a>
+          </p>
+        </div>
+
+        <div class="gallary_image">
+          <img src="image/gallary_4.jpg" />
+
+          <h3>Blueberry Cake</h3>
+          <p>
+            "Blueberry cake: A burst of blueberry bliss in every delightful
+            slice."
+          </p>
+          <a href="#Order" class="gallary_btn">Order Now</a>
+        </div>
+
+        <div class="gallary_image">
+          <img src="image/gallary_5.jpg" />
+
+          <h3>Pizza</h3>
+          <p>
+            "Pizza: A slice of heaven with a world of flavors in every bite."
+          </p>
+          <a href="#Order" class="gallary_btn">Order Now</a>
+        </div>
+
+        <div class="gallary_image">
+          <img src="image/gallary_6.jpg" />
+
+          <h3>Pancake</h3>
+          <p>
+            "Pancake: A fluffy, golden canvas ready to soak up your favorite
+            flavors and toppings."
+          </p>
+
+          <a href="#Order" class="gallary_btn">Order Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!--Review-->
+
+    <div class="review" id="Review">
+      <h1>Customer<span>Review</span></h1>
+
+      <div class="review_box">
+        <div class="review_card">
+          <div class="review_profile">
+            <img src="image/review_1.png" />
+          </div>
+
+          <div class="review_text">
+            <h2 class="name">Tina Sharma</h2>
+
+            <div class="review_icon">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+
+            <div class="review_social">
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+
+            <p>
+              My experience at FoodZone was nothing short of extraordinary. The
+              atmosphere exuded charm, service was top-notch, and the food, a
+              culinary masterpiece. Every bite was a revelation of flavors, and
+              their commitment to sustainable sourcing truly impressed me. It's
+              a place where you don't just dine; you create cherished memories.
+              I'll be returning for another culinary adventure soon!
+            </p>
+          </div>
+        </div>
+
+        <div class="review_card">
+          <div class="review_profile">
+            <img src="image/review_2.png" />
+          </div>
+
+          <div class="review_text">
+            <h2 class="name">Rohan Singh</h2>
+
+            <div class="review_icon">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+
+            <div class="review_social">
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+
+            <p>
+              FoodZone truly wowed me. The ambiance was inviting, service
+              exceptional, and the food, a gastronomic delight. Every dish was a
+              symphony of taste, and their commitment to sustainability was
+              evident. It's a place where you don't just eat; you embark on an
+              unforgettable culinary journey. I'm already looking forward to my
+              next visit.
+            </p>
+          </div>
+        </div>
+
+        <div class="review_card">
+          <div class="review_profile">
+            <img src="image/review_3.png" />
+          </div>
+
+          <div class="review_text">
+            <h2 class="name">Shruti Shah</h2>
+
+            <div class="review_icon">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+
+            <div class="review_social">
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+
+            <p>
+              FoodZone left an indelible impression on me. The atmosphere exuded
+              warmth, service was impeccable, and the culinary journey was a
+              revelation. Each dish was a fusion of art and flavor. What sets
+              them apart is their dedication to sustainability. A must-visit for
+              those who crave an exceptional dining experience. I'm already
+              planning my return.
+            </p>
+          </div>
+        </div>
+
+        <div class="review_card">
+          <div class="review_profile">
+            <img src="image/review_4.png" />
+          </div>
+
+          <div class="review_text">
+            <h2 class="name">Aman Pal</h2>
+
+            <div class="review_icon">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+
+            <div class="review_social">
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-linkedin-in"></i>
+            </div>
+
+            <p>
+              I was thoroughly impressed with FoodZone. The atmosphere was
+              welcoming, service outstanding, and the food was a revelation of
+              flavors. Each dish was a perfect balance of artistry and taste.
+              Their commitment to sustainability stood out. It's a must-visit
+              for those seeking a remarkable dining experience. I'm already
+              planning my return.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Order-->
+
+    <div class="order" id="Order">
+      <h1><span>Order</span>Now</h1>
+
+      <div class="order_main">
+        <div class="order_image">
+          <img src="image/order_image.png" />
+        </div>
+
+        <form action="#">
+          <div class="input">
+            <p>Name</p>
+            <input type="text" placeholder="your name" />
+          </div>
+
+          <div class="input">
+            <p>Table Number</p>
+            <input type="number" placeholder="your table" />
+          </div>
+
+          <div class="input">
+            <p>Phone Number</p>
+            <input placeholder="your contact number" />
+          </div>
+
+          <div class="input">
+            <p>Servings</p>
+            <input type="text" placeholder="how many order" />
+          </div>
+
+          <div class="input">
+            <p>Your Order</p>
+            <input placeholder="food name" />
+          </div>
+
+          <div class="input">
+            <p>Your Order no.</p>
+            <input placeholder="your order no. from menu" />
+          </div>
+          <div class="input">
+            <p>Address</p>
+            <input placeholder="your Address" />
+          </div>
+          <div class="input">
+            <p>Payment Method</p>
+            <input placeholder="your Payment method" />
+          </div>
+
+          <a href="#" class="order_btn">Order Now</a>
+          <a href="#" class="order_btn">Book a table Now</a>
+        </form>
+      </div>
+    </div>
+
+    <!--Team-->
+
+    <div class="team">
+      <h1>Our<span>Team</span></h1>
+
+      <div class="team_box">
+        <div class="profile">
+          <img src="image/chef1.png" />
+
+          <div class="info">
+            <h2 class="name">Head Chef</h2>
+            <p class="bio">Our team lead</p>
+            <div class="team_icon">
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile">
+          <img src="image/chef2.png" />
+
+          <div class="info">
+            <h2 class="name">Assitant Chef</h2>
+            <p class="bio">Dedicated talent</p>
+            <div class="team_icon">
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile">
+          <img src="image/chef3.jpg" />
+
+          <div class="info">
+            <h2 class="name">Dessert Chef</h2>
+            <p class="bio">Master of sweet</p>
+
+            <div class="team_icon">
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile">
+          <img src="image/chef4.jpg" />
+
+          <div class="info">
+            <h2 class="name">Assitant Chef</h2>
+            <p class="bio">Valuable member</p>
+
+            <div class="team_icon">
+              <i class="fa-brands fa-facebook-f"></i>
+              <i class="fa-brands fa-twitter"></i>
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Footer-->
+
+    <footer>
+      <div class="footer_main">
+        <div class="footer_tag">
+          <h2>Location</h2>
+          <p>Dwarka</p>
+          <p>Uttam Nagar</p>
+          <p>Model Town</p>
+          <p>Chandni Chawk</p>
+          <p>Sarojni nagar</p>
+        </div>
+
+        <div class="footer_tag">
+          <h2>Quick Link</h2>
+          <p>Home</p>
+          <p>About</p>
+          <p>Menu</p>
+          <p>Gallary</p>
+          <p>Order</p>
+        </div>
+
+        <div class="footer_tag">
+          <h2>Contact</h2>
+          <p>+94 12 3456 789</p>
+          <p>+94 25 5568456</p>
+          <p>abc123@gmail.com</p>
+          <p>FoodZone123@gmail.com</p>
+        </div>
+
+        <div class="footer_tag">
+          <h2>Our Service</h2>
+          <p>Fast Delivery</p>
+          <p>Easy Payments</p>
+          <p>24 x 7 Service</p>
+        </div>
+
+        <div class="footer_tag">
+          <h2>Follows</h2>
+          <i class="fa-brands fa-facebook-f"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+      </div>
+
+      <p class="end">
+        Design by<span
+          ><i class="fa-solid fa-face-grin"></i> Mohd Arshil Azim</span
+        >
+      </p>
+    </footer>
+  </body>
+</html>
