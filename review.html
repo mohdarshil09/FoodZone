@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Food Website</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        />
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+          $(document).ready(function () {
+            let currentImage = 0;
+            const images = [
+              "image/main_img.png",
+              "image/juse.jpg",
+              "image/pizza.jpg",
+            ];
+    
+            // Function to apply CSS to all images
+            function applyCSSToImages() {
+              $(".main_image img").css({
+                width: "700px",
+                height: "500px", // Set the desired height
+                position: "relative",
+                left: "70px",
+              });
+            }
+    
+            // Initial CSS application
+            applyCSSToImages();
+    
+            function changeImage() {
+              $(".main_image img").attr("src", images[currentImage]);
+              currentImage = (currentImage + 1) % images.length;
+    
+              // Apply CSS to the new image
+              applyCSSToImages();
+            }
+    
+            // Change the image every 5 seconds
+            setInterval(changeImage, 3000);
+          });
+        </script>
+      </head>
+<body>
+    <div class="review" id="Review">
+        <h1>Customer<span>Review</span></h1>
+  
+        <div class="review_box">
+          <div class="review_card">
+            <div class="review_profile">
+              <img src="image/review_1.png" />
+            </div>
+  
+            <div class="review_text">
+              <h2 class="name">Tina Sharma</h2>
+  
+              <div class="review_icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+  
+              <div class="review_social">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+              </div>
+  
+              <p>
+                My experience at FoodZone was nothing short of extraordinary. The
+                atmosphere exuded charm, service was top-notch, and the food, a
+                culinary masterpiece. Every bite was a revelation of flavors, and
+                their commitment to sustainable sourcing truly impressed me. It's
+                a place where you don't just dine; you create cherished memories.
+                I'll be returning for another culinary adventure soon!
+              </p>
+            </div>
+          </div>
+  
+          <div class="review_card">
+            <div class="review_profile">
+              <img src="image/review_2.png" />
+            </div>
+  
+            <div class="review_text">
+              <h2 class="name">Rohan Singh</h2>
+  
+              <div class="review_icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+  
+              <div class="review_social">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+              </div>
+  
+              <p>
+                FoodZone truly wowed me. The ambiance was inviting, service
+                exceptional, and the food, a gastronomic delight. Every dish was a
+                symphony of taste, and their commitment to sustainability was
+                evident. It's a place where you don't just eat; you embark on an
+                unforgettable culinary journey. I'm already looking forward to my
+                next visit.
+              </p>
+            </div>
+          </div>
+  
+          <div class="review_card">
+            <div class="review_profile">
+              <img src="image/review_3.png" />
+            </div>
+  
+            <div class="review_text">
+              <h2 class="name">Shruti Shah</h2>
+  
+              <div class="review_icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+  
+              <div class="review_social">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+              </div>
+  
+              <p>
+                FoodZone left an indelible impression on me. The atmosphere exuded
+                warmth, service was impeccable, and the culinary journey was a
+                revelation. Each dish was a fusion of art and flavor. What sets
+                them apart is their dedication to sustainability. A must-visit for
+                those who crave an exceptional dining experience. I'm already
+                planning my return.
+              </p>
+            </div>
+          </div>
+  
+          <div class="review_card">
+            <div class="review_profile">
+              <img src="image/review_4.png" />
+            </div>
+  
+            <div class="review_text">
+              <h2 class="name">Aman Pal</h2>
+  
+              <div class="review_icon">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+  
+              <div class="review_social">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+              </div>
+  
+              <p>
+                I was thoroughly impressed with FoodZone. The atmosphere was
+                welcoming, service outstanding, and the food was a revelation of
+                flavors. Each dish was a perfect balance of artistry and taste.
+                Their commitment to sustainability stood out. It's a must-visit
+                for those seeking a remarkable dining experience. I'm already
+                planning my return.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+</body>
+</html>

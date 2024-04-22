@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Food Website</title>
+        <link rel="stylesheet" href="style.css" />
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+          integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        />
+    
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+          $(document).ready(function () {
+            let currentImage = 0;
+            const images = [
+              "image/main_img.png",
+              "image/juse.jpg",
+              "image/pizza.jpg",
+            ];
+    
+            // Function to apply CSS to all images
+            function applyCSSToImages() {
+              $(".main_image img").css({
+                width: "700px",
+                height: "500px", // Set the desired height
+                position: "relative",
+                left: "70px",
+              });
+            }
+    
+            // Initial CSS application
+            applyCSSToImages();
+    
+            function changeImage() {
+              $(".main_image img").attr("src", images[currentImage]);
+              currentImage = (currentImage + 1) % images.length;
+    
+              // Apply CSS to the new image
+              applyCSSToImages();
+            }
+    
+            // Change the image every 5 seconds
+            setInterval(changeImage, 3000);
+          });
+        </script>
+      </head>
+<body>
+    <div class="order" id="Order">
+        <h1><span>Order</span>Now</h1>
+  
+        <div class="order_main">
+          <div class="order_image">
+            <img src="image/order_image.png" />
+          </div>
+  
+          <form action="#">
+            <div class="input">
+              <p>Name</p>
+              <input type="text" placeholder="your name" />
+            </div>
+  
+            <div class="input">
+              <p>Table Number</p>
+              <input type="number" placeholder="your table" />
+            </div>
+  
+            <div class="input">
+              <p>Phone Number</p>
+              <input placeholder="your contact number" />
+            </div>
+  
+            <div class="input">
+              <p>Servings</p>
+              <input type="text" placeholder="how many order" />
+            </div>
+  
+            <div class="input">
+              <p>Your Order</p>
+              <input placeholder="food name" />
+            </div>
+  
+            <div class="input">
+              <p>Your Order no.</p>
+              <input placeholder="your order no. from menu" />
+            </div>
+            <div class="input">
+              <p>Address</p>
+              <input placeholder="your Address" />
+            </div>
+            <div class="input">
+              <p>Payment Method</p>
+              <input placeholder="your Payment method" />
+            </div>
+  
+            <a href="#" class="order_btn">Order Now</a>
+            <a href="#" class="order_btn">Book a table Now</a>
+          </form>
+        </div>
+      </div>
+</body>
+</html>
